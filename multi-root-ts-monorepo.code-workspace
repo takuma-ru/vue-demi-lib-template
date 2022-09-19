@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "path": "packages/lib"
+    },
+    {
+      "path": "docs"
+    },
+    {
+      "path": "examples/vue3"
+    },
+    {
+      "path": "examples/vue2"
+    }
+  ],
+}
