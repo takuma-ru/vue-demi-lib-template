@@ -12,13 +12,13 @@ import './lib.scss'
 
 import * as CSS from 'csstype'
 import { useVModel } from '@vueuse/core'
-interface CSSProperties extends CSS.Properties<string | number> {}
+type CSSProperties = CSS.Properties<string | number>
 type StyleValue = CSSProperties | Array<StyleValue>
 
 install()
 
 export default defineComponent({
-  name: 'lib', // 🐈
+  name: 'LibComponent', // 🐈
 
   /* --  -- */
 
