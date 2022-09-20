@@ -1,19 +1,27 @@
 import {
   computed,
   defineComponent,
-  h,
   ref,
   toRefs,
   watch,
   install,
+  isVue3,
+  h,
+  App,
 } from 'vue-demi'
-
-import './lib.scss'
-
-import * as CSS from 'csstype'
 import { useVModel } from '@vueuse/core'
+import * as CSS from 'csstype'
+import './lib.scss'
+/* import h, { slot } from '../scripts/h-demi' */
+
 type CSSProperties = CSS.Properties<string | number>
 type StyleValue = CSSProperties | Array<StyleValue>
+
+interface Options {
+  props?: Object,
+  domProps?: Object
+  on?: Object
+}
 
 install()
 
@@ -34,6 +42,8 @@ export default defineComponent({
   ],
 
   setup(props, context) {
+    console.log(isVue3 ? 'vue3' : 'vue2')
+
     /* -- composables -- */
 
 
@@ -47,8 +57,11 @@ export default defineComponent({
 
 
     /* -- render -- */
-    return () => {
-      h('div', null)
-    }
-  }
+  },
+
+  render() {
+    return h('div', {
+      class: 'lib'
+    }, 'text')
+  },
 })

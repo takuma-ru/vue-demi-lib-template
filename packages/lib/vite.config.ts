@@ -17,9 +17,9 @@ export default defineConfig({
     cssCodeSplit: true,
     // minify: true,
     lib: {
-      entry: './src/index.ts',
+      entry: './src/main.ts',
       name: 'lib', // 🐈
-      fileName: 'swipe-modal', // 🐈
+      fileName: 'lib', // 🐈
       formats: ['es', 'cjs', 'umd']
     },
     rollupOptions: {
