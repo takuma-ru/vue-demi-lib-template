@@ -1,6 +1,6 @@
 {
   "name": "lib",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
     "publish:lib": "yarn build && npm publish --access=public",
+    "switch:2.7": "vue-demi-switch 2.7 vue2.7",
     "switch:2": "vue-demi-switch 2 vue2",
     "switch:3": "vue-demi-switch 3",
     "version-up:major": "yarn version --major --no-git-tag-version --no-commit-hooks",
@@ -22,7 +23,6 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "@vitejs/plugin-vue": "^3.1.0",
-    "@vue/composition-api": "^1.7.0",
     "@vue/eslint-config-typescript": "^11.0.1",
     "eslint": "^8.23.1",
     "eslint-plugin-vue": "^9.5.1",
@@ -33,15 +33,13 @@
     "vite-plugin-css-injected-by-js": "^1.5.1",
     "vue": "^3.2.37",
     "vue-tsc": "^0.40.4",
-    "vue2": "npm:vue@^2.6.14"
+    "vue2": "npm:vue@^2.6",
+    "vue2.7": "npm:vue@^2.7"
   },
   "peerDependencies": {
-    "@vue/composition-api": "^1.7.0",
     "vue": "^2.6.0 || ^3.2.0"
   },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
+  "optionalDependencies": {
+    "@vue/composition-api": "^1.7.0"
   }
 }

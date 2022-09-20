@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import lib from '../../../packages/lib/src/main'
+import { lib } from '../../../packages/lib/src/main'
 
 const msg = ref('vue2.7')
 const model = ref(false)

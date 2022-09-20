@@ -8,17 +8,14 @@
     "examples/**"
   ],
   "scripts": {
-    "dev:2": "yarn switch:2 && yarn workspace vue2 dev",
-    "dev:3": "yarn switch:3 && yarn workspace vue3 dev",
+    "dev:2.7": "yarn workspace lib switch:2.7 && yarn workspace vue2 dev",
+    "dev:3": "yarn workspace lib switch:3 && yarn workspace vue3 dev",
     "dev:docs": "yarn docs dev",
 
     "build:lib": "yarn workspace lib build",
     "build:docs": "yarn docs build",
 
     "publish:lib": "yarn workspace lib publish:lib",
-
-    "switch:2": "yarn workspace lib switch:2",
-    "switch:3": "yarn workspace lib switch:3",
 
     "vue2": "yarn workspace vue2",
     "vue3": "yarn workspace vue3",

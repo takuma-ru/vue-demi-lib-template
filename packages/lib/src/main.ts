@@ -1,4 +1,3 @@
-import lib from './components/lib' // 🐈
+import lib from './components/lib.vue'
 
-export { lib } // 🐈
-export default lib // 🐈
+export { lib }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import lib from '../../../packages/lib/src/components/lib'
+import { lib } from '../../../packages/lib/src/main'
 
 const model = ref(false)
 </script>
