@@ -13,7 +13,7 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 ## Dependencies / DevDependencies
 | name | version |
 | ------------- | ------------- |
-| package/lib |  |
+| `package/lib` |
 | @vueuse/core | 8.9.4 |
 | vue-demi | ^0.13.11 |
 | @vue/composition-api | ^1.7.0 |
@@ -25,14 +25,14 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 | vue | ^3.2.37 |
 | vue2 | ^2.6 |
 | vue2.7 | ^2.7.10 |
-|||
-| examples/nuxt2.6 |  |
+||
+| `examples/nuxt2.6` |
 | @nuxtjs/composition-api | ^0.33.1 |
 | eslint | ^8.24.0 |
 | nuxt | ^2.15.8 |
 | vue | ^2.6.14 |
-|||
-| examples/vue3 |  |
+||
+| `examples/vue3` |
 | vue | ^3.2.37 |
 | vite | ^3.1.0 |
 | vue-tsc | ^0.40.4 |
