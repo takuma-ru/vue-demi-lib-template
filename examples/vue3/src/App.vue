@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { lib } from '../../../packages/lib/src/main'
+import lib from 'lib'
 
-const model = ref(false)
+const model = ref(true)
 </script>
 
 <template>
   <div>
     <h1>vue 3 example</h1>
-    <button @click="model = !model">v-model switch</button>
+    <button @click="model = !model">v-model switch ({{ model }})</button>
     <lib v-model="model"></lib>
   </div>
 </template>
