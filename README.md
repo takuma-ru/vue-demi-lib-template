@@ -8,19 +8,34 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 
 ## Features
 - [x] Use `vue-demi` (Supports vue2, vue3, nuxt2, nuxt3, vite)
+- [x] Support `sass / scss`
 
-## Requirement
+## Dependencies / DevDependencies
 | name | version |
 | ------------- | ------------- |
 | package/lib |  |
-| framer-motion | ^7.3.6 |
-| next | 12.3.1 |
-| react  | 18.2.0 |
-| storybook | ^6.5.12 |
-| styled-components | ^5.3.5 |
-| webpack(storybook only) | ^5.74.0 |
+| @vueuse/core | 8.9.4 |
+| vue-demi | ^0.13.11 |
+| @vue/composition-api | ^1.7.0 |
+| eslint | ^8.23.1 |
+| sass | ^1.53.0 |
+| vite | ^3.1.0 |
+| vite-plugin-css-injected-by-js | ^1.5.1 |
+| vue-tsc | ^1.0.8 |
+| vue | ^3.2.37 |
+| vue2 | ^2.6 |
+| vue2.7 | ^2.7.10 |
+|||
 | examples/nuxt2.6 |  |
+| @nuxtjs/composition-api | ^0.33.1 |
+| eslint | ^8.24.0 |
+| nuxt | ^2.15.8 |
+| vue | ^2.6.14 |
+|||
 | examples/vue3 |  |
+| vue | ^3.2.37 |
+| vite | ^3.1.0 |
+| vue-tsc | ^0.40.4 |
 
 ## Getting Started
 
@@ -44,14 +59,14 @@ Automatically installs dependencies and starts the server.
 ```md
 yarn dev:3
 ```
-[localhost:3030]('http://localhost:3030/')
+[localhost:3030](http://localhost:3030/)
 
 #### 3. Test for `vue2.6`
 Automatically installs dependencies and starts the server.
 ```md
 yarn dev:2.6
 ```
-[localhost:3020]('http://localhost:3020/')
+[localhost:3020](http://localhost:3020/)
 
 ## Deploy Service
 none
