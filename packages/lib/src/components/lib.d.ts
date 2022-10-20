@@ -1,3 +1,4 @@
+import './lib.scss';
 declare const _default: import("vue-demi").DefineComponent<{
     modelValue: {
         type: BooleanConstructor;

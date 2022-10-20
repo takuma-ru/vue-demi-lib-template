@@ -7,13 +7,12 @@
     "docs/**"
   ],
   "scripts": {
-    "dev:2.6": "cd ./examples/nuxt2.6/ && yarn && yarn dev",
-    "dev:3": "cd ./examples/vue3/ && yarn && yarn dev",
+    "dev:2.6": "cd ./examples/nuxt2.6/ && yarn && yarn upgrade lib && yarn dev",
+    "dev:3": "cd ./examples/vue3/ && yarn && yarn upgrade lib && yarn dev",
     "dev:docs": "yarn docs dev",
 
     "build:lib": "yarn workspace lib build",
     "build:docs": "yarn docs build",
-
     "publish:lib": "yarn workspace lib publish:lib",
 
     "lib": "yarn workspace lib",

@@ -2,14 +2,19 @@
   "name": "lib",
   "private": false,
   "version": "1.0.0",
+  "type": "module",
   "main": "./dist/lib.umd.js",
   "module": "./dist/lib.js",
   "exports": {
     "import": "./dist/lib.js",
     "require": "./dist/lib.umd.js"
   },
-  "types": "./src/components/lib.d.ts",
-  "type": "module",
+  "types": "./src/main.d.ts",
+  "files": [
+    "./dist/*",
+    "./src/*.d.ts",
+    "LICENSE.md"
+  ],
   "scripts": {
     "build": "yarn switch:3 && vue-tsc --declaration --emitDeclarationOnly && vite build --watch",
     "preview": "vite preview",

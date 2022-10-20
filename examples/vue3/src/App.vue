@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import lib from 'lib'
+import { lib } from 'lib'
 
 const model = ref(true)
 </script>
