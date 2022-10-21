@@ -12,6 +12,8 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "./types/src",
     "baseUrl": "./",
     "paths": {
       "~/*": [

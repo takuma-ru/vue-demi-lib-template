@@ -9,10 +9,10 @@
     "import": "./dist/lib.js",
     "require": "./dist/lib.umd.js"
   },
-  "types": "./src/main.d.ts",
+  "types": "./types/src/main.d.ts",
   "files": [
     "./dist/*",
-    "./src/*.d.ts",
+    "./types/*",
     "LICENSE.md"
   ],
   "scripts": {

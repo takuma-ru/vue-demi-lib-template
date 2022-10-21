@@ -4,7 +4,7 @@ declare const _default: import("vue-demi").DefineComponent<{
         type: BooleanConstructor;
         required: true;
     };
-}, () => import("vue-demi").VNode<import("vue-demi").RendererNode, import("vue-demi").RendererElement, {
+}, () => false | import("vue-demi").VNode<import("vue-demi").RendererNode, import("vue-demi").RendererElement, {
     [key: string]: any;
 }>, unknown, {}, {}, import("vue-demi").ComponentOptionsMixin, import("vue-demi").ComponentOptionsMixin, "modelValue"[], "modelValue", import("vue-demi").VNodeProps & import("vue-demi").AllowedComponentProps & import("vue-demi").ComponentCustomProps, Readonly<import("vue-demi").ExtractPropTypes<{
     modelValue: {
