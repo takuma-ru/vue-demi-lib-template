@@ -1,4 +1,5 @@
 import {
+  computed,
   defineComponent,
   h,
   install,
@@ -11,6 +12,8 @@ import {
   tryOnMounted,
   useVModel
 } from '@vueuse/core'
+
+import { StyleValueType } from '~/types/StyleValueType'
 import './lib.scss'
 
 install()
@@ -40,11 +43,12 @@ export default defineComponent({
     const propsRef = toRefs(props)
 
     /* -- computed -- */
-
+    const slot = computed(() => {
+      return context.slots.default?.()
+    })
 
     /* -- watch -- */
     watch(propsRef.modelValue, (newVal) => {
-      console.log(`${new Date().getDate()}日 | v-model: ${newVal}`)
     })
 
     /* -- life cycle -- */
@@ -52,17 +56,11 @@ export default defineComponent({
       console.log('on mounted !')
     })
 
-    /* setInterval(() => {
-      runtime.value += 0.5
-      console.log(runtime.value)
-    }, 500); */
-
     /* -- render -- */
-
     return () => (
-      /* propsRef.modelValue.value */ true &&
+      vModel.value &&
         h('div', { class: 'lib' }, [
-          h('h1', `hello world ${propsRef.modelValue.value} ${vModel.value}`),
+          h('p', slot.value),
         ])
     )
   },
