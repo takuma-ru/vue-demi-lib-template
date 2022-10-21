@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 export default defineConfig({
   plugins: [
     vue(),
@@ -9,7 +8,9 @@ export default defineConfig({
   ],
 
   optimizeDeps: {
-    exclude: ['vue-demi']
+    exclude: [
+      'vue-demi',
+    ],
   },
 
   build: {
@@ -20,14 +21,14 @@ export default defineConfig({
       entry: './src/main.ts',
       name: 'lib', // 🐈
       fileName: 'lib', // 🐈
-      formats: ['es', 'cjs', 'umd']
+      formats: [ 'es', 'cjs', 'umd' ],
     },
     rollupOptions: {
-      external: ['vue', 'vue-demi'],
+      external: [ 'vue', 'vue-demi' ],
       output: {
         exports: 'named',
         manualChunks: undefined,
       },
-    }
-  }
+    },
+  },
 })

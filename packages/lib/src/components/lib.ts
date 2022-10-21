@@ -1,7 +1,6 @@
 import {
   computed,
   defineComponent,
-  h,
   install,
   isVue3,
   ref,
@@ -10,11 +9,12 @@ import {
 } from 'vue-demi'
 import {
   tryOnMounted,
-  useVModel
+  useVModel,
 } from '@vueuse/core'
 
 import { StyleValueType } from '~/types/StyleValueType'
 import './lib.scss'
+import { h } from '../scripts/h'
 
 install()
 
@@ -25,11 +25,11 @@ export default defineComponent({
     modelValue: {
       type: Boolean,
       required: true,
-    }
+    },
   },
 
   emits: [
-    'modelValue'
+    'modelValue',
   ],
 
   setup(props, context) {
@@ -48,8 +48,9 @@ export default defineComponent({
     })
 
     /* -- watch -- */
-    watch(propsRef.modelValue, (newVal) => {
-    })
+    /* watch(propsRef.modelValue, (newVal) => {
+
+    }) */
 
     /* -- life cycle -- */
     tryOnMounted(() => {
@@ -60,7 +61,7 @@ export default defineComponent({
     return () => (
       vModel.value &&
         h('div', { class: 'lib' }, [
-          h('p', slot.value),
+          h('p', {}, slot.value),
         ])
     )
   },
