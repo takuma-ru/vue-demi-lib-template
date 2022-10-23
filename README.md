@@ -11,31 +11,125 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 - [x] Support `sass / scss`
 
 ## Dependencies / DevDependencies
-| name | version |
-| ------------- | ------------- |
-| `package/lib` |
-| @vueuse/core | 8.9.4 |
-| vue-demi | ^0.13.11 |
-| @vue/composition-api | ^1.7.0 |
-| eslint | ^8.23.1 |
-| sass | ^1.53.0 |
-| vite | ^3.1.0 |
-| vite-plugin-css-injected-by-js | ^1.5.1 |
-| vue-tsc | ^1.0.8 |
-| vue | ^3.2.37 |
-| vue2 | ^2.6 |
-| vue2.7 | ^2.7.10 |
-||
-| `examples/nuxt2.6` |
-| @nuxtjs/composition-api | ^0.33.1 |
-| eslint | ^8.24.0 |
-| nuxt | ^2.15.8 |
-| vue | ^2.6.14 |
-||
-| `examples/vue3` |
-| vue | ^3.2.37 |
-| vite | ^3.1.0 |
-| vue-tsc | ^0.40.4 |
+<details>
+  <summary>
+    package/lib
+  </summary>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="1">name</th>
+        <th colspan="1">version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>@vueuse/core</td>
+        <td>8.9.4</td>
+      </tr>
+      <tr>
+        <td>vue-demi</td>
+        <td>^0.13.11</td>
+      </tr>
+      <tr>
+        <td>@vue/composition-api</td>
+        <td>^1.7.0</td>
+      </tr>
+      <tr>
+        <td>eslint</td>
+        <td>^8.23.1</td>
+      </tr>
+      <tr>
+        <td>sass</td>
+        <td>^1.53.0</td>
+      </tr>
+      <tr>
+        <td>vite</td>
+        <td>^3.1.0</td>
+      </tr>
+      <tr>
+        <td>vite-plugin-css-injected-by-js</td>
+        <td>^1.5.1</td>
+      </tr>
+      <tr>
+        <td>vue-tsc</td>
+        <td>^1.0.8</td>
+      </tr>
+      <tr>
+        <td>vue</td>
+        <td>^3.2.37</td>
+      </tr>
+      <tr>
+        <td>vue2</td>
+        <td>^2.6</td>
+      </tr>
+      <tr>
+        <td>vue2.7</td>
+        <td>^2.7.10</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<details>
+  <summary>
+    examples/nuxt2.6
+  </summary>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="1">name</th>
+        <th colspan="1">version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>@nuxtjs/composition-api</td>
+        <td>^0.33.1</td>
+      </tr>
+      <tr>
+        <td>eslint</td>
+        <td>^8.24.0</td>
+      </tr>
+      <tr>
+        <td>nuxt</td>
+        <td>^2.15.8</td>
+      </tr>
+      <tr>
+        <td>vue</td>
+        <td>^2.6.14</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<details>
+  <summary>
+    examples/vue3
+  </summary>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="1">name</th>
+        <th colspan="1">version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>vue</td>
+        <td>^3.2.37</td>
+      </tr>
+      <tr>
+        <td>vite</td>
+        <td>^3.1.0</td>
+      </tr>
+      <tr>
+        <td>vue-tsc</td>
+        <td>^0.40.4</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
 
 ## Getting Started
 
