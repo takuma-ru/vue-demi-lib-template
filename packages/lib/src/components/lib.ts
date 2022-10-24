@@ -12,7 +12,6 @@ import {
   useVModel,
 } from '@vueuse/core'
 
-import { StyleValueType } from '~/types/StyleValueType'
 import './lib.scss'
 import { h } from '../scripts/h'
 
@@ -61,7 +60,7 @@ export default defineComponent({
     return () => (
       vModel.value &&
         h('div', { class: 'lib' }, [
-          h('p', {}, slot.value),
+          h('button', { onClick: () => console.log('on click') }, slot.value),
         ])
     )
   },

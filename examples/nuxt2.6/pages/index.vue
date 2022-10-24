@@ -6,7 +6,9 @@
     >
       switch v-model
     </button>
-    <LibTest :model-value="model" />
+    <LibTest :model-value="model">
+      text
+    </LibTest>
   </div>
 </template>
 
