@@ -6,6 +6,7 @@ import {
 } from 'vue-demi'
 
 import { StyleValueType } from '~/types/StyleValueType'
+import { HtmlTagType } from '~/types/htmlTag'
 
 declare type VNodeMountHook = (vnode: VNode) => void;
 
@@ -60,7 +61,7 @@ declare type RawSlots = {
   $stable?: boolean;
 };
 
-  const H = (type: string, props?: RawProps | null, children?: RawChildren | RawSlots): VNode =>  {
+  const H = (type: HtmlTagType, props?: RawProps | null, children?: RawChildren | RawSlots): VNode =>  {
   return h(
     type,
     {

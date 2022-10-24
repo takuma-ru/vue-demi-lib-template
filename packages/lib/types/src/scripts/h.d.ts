@@ -1,6 +1,5 @@
-import { VNode, VNodeArrayChildren, VNodeRef } from 'vue-demi'
-import { StyleValueType } from '../../StyleValueType'
-
+import { VNode, VNodeArrayChildren, VNodeRef } from 'vue-demi';
+import { StyleValueType } from '~/types/StyleValueType';
 declare type VNodeMountHook = (vnode: VNode) => void;
 declare type VNodeUpdateHook = (vnode: VNode, oldVNode: VNode) => void;
 export declare type VNodeProps = {
@@ -39,8 +38,8 @@ export declare type VNodeProps = {
     onScroll?: () => void;
     onSelect?: () => void;
     style?: StyleValueType;
-}
-;declare type RawProps = VNodeProps & {
+};
+declare type RawProps = VNodeProps & {
     __v_isVNode?: never;
     [Symbol.iterator]?: never;
 } & Record<string, unknown>;
@@ -49,5 +48,5 @@ declare type RawSlots = {
     [name: string]: unknown;
     $stable?: boolean;
 };
-declare const H: (type: string, props?: RawProps | null, children?: RawChildren | RawSlots) => VNode
-export { H as h }
+declare const H: (type: string, props?: RawProps | null, children?: RawChildren | RawSlots) => VNode;
+export { H as h };
