@@ -1,5 +1,6 @@
 import { VNode, VNodeArrayChildren, VNodeRef } from 'vue-demi';
 import { StyleValueType } from '~/types/StyleValueType';
+import { HtmlTagType } from '~/types/htmlTag';
 declare type VNodeMountHook = (vnode: VNode) => void;
 declare type VNodeUpdateHook = (vnode: VNode, oldVNode: VNode) => void;
 export declare type VNodeProps = {
@@ -48,5 +49,5 @@ declare type RawSlots = {
     [name: string]: unknown;
     $stable?: boolean;
 };
-declare const H: (type: string, props?: RawProps | null, children?: RawChildren | RawSlots) => VNode;
+declare const H: (type: HtmlTagType, props?: RawProps | null, children?: RawChildren | RawSlots) => VNode;
 export { H as h };

@@ -42,6 +42,9 @@ export default defineComponent({
     const propsRef = toRefs(props)
 
     /* -- computed -- */
+    /**
+     * <slot />
+     */
     const slot = computed(() => {
       return context.slots.default?.()
     })
@@ -58,10 +61,9 @@ export default defineComponent({
 
     /* -- render -- */
     return () => (
-      vModel.value &&
-        h('div', { class: 'lib' }, [
-          h('button', { onClick: () => console.log('on click') }, slot.value),
-        ])
+      vModel.value && h('div', { class: 'lib' }, [
+        h('button', { onClick: () => console.log('on click') }, slot.value),
+      ])
     )
   },
 })

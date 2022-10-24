@@ -7,8 +7,14 @@
 UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 
 ## Features
-- [x] Use `vue-demi` (Supports vue2, vue3, nuxt2, nuxt3, vite)
-- [x] Support `sass / scss`
+- [x] Library development projects using vite
+- [x] Project for testing with vue3(vite)
+- [x] Project for testing with vue2(nuxt)
+- [ ] Template project for library documentation (nuxt3)
+- [ ] Enable development with `tsx`
+- [ ] Automatic update of test projects
+- [ ] Introduction of storybook
+- [ ] Introduction of jest (in test project)
 
 ## Dependencies / DevDependencies
 <details>
@@ -153,14 +159,14 @@ Automatically installs dependencies and starts the server.
 ```md
 yarn dev:3
 ```
-[localhost:3030](http://localhost:3030/)
+Access to [localhost:3030](http://localhost:3030/)
 
 #### 3. Test for `vue2.6`
 Automatically installs dependencies and starts the server.
 ```md
 yarn dev:2.6
 ```
-[localhost:3020](http://localhost:3020/)
+Access to [localhost:3020](http://localhost:3020/)
 
 ## Deploy Service
 none
@@ -170,4 +176,5 @@ none
 
 ----
 
+<!-- I would appreciate it if you would not delete this statement -->
 **This template was created by [@takuma-ru](https://github.com/takuma-ru)**
