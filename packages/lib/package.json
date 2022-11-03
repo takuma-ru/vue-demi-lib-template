@@ -16,7 +16,8 @@
     "LICENSE.md"
   ],
   "scripts": {
-    "build": "yarn switch:3 && vue-tsc --declaration --emitDeclarationOnly && vite build --watch",
+    "dev": "yarn switch:3 && vue-tsc --declaration --emitDeclarationOnly && vite build --watch",
+    "build": "yarn switch:3 && vue-tsc --declaration --emitDeclarationOnly && vite build",
     "preview": "vite preview",
     "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
     "publish:lib": "yarn build && npm publish --access=public",

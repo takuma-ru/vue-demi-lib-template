@@ -9,7 +9,16 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.1.0",
-    "nuxt": "^3.0.0-rc.10"
+    "@nuxt/content": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "nuxt": "^3.0.0-rc.12"
+  },
+  "dependencies": {
+    "material-icons": "^1.12.1",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

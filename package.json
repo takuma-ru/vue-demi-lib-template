@@ -9,11 +9,15 @@
   "scripts": {
     "dev:2.6": "cd ./examples/nuxt2.6/ && yarn && yarn upgrade lib && yarn dev",
     "dev:3": "cd ./examples/vue3/ && yarn && yarn upgrade lib && yarn dev",
+    "dev:lib":  "yarn lib dev",
     "dev:docs": "yarn docs dev",
 
-    "build:lib": "yarn workspace lib build",
+    "refresh:2.6": "cd ./examples/vue3/ && yarn && yarn upgrade --latest lib",
+    "refresh:3": "cd ./examples/vue3/ && yarn && yarn upgrade --latest lib",
+
+    "build:lib": "yarn lib build",
     "build:docs": "yarn docs build",
-    "publish:lib": "yarn workspace lib publish:lib",
+    "publish:lib": "yarn lib publish:lib",
 
     "lib": "yarn workspace lib",
     "docs": "yarn workspace docs"
