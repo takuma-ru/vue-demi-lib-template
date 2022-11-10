@@ -10,24 +10,23 @@
     <div class="text">
       <Icon
         v-if="icon"
-        :color="!isIcon ? dependsLuminanceColor(props.color) : null"
+        :icon="icon"
+        :color="!isIcon ? dependsLuminanceColor(backgroundColor) : null"
         size="24px"
         :fill="props.iconProps?.fill"
         :wght="props.iconProps?.wght"
         :style="!isIcon && 'margin-right: 0.4rem'"
-      >
-        {{ icon }}
-      </Icon>
+      />
       <slot />
     </div>
   </button>
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~~/store/colorStore'
+import { useColorStore } from '~/store/colorStore'
 import { dependsLuminanceColor } from '~/hooks/utils/dependsLuminanceColor'
 import { IProps as IIconProps } from '~/components/content/Icon.vue'
-import { IconNameType } from '~~/types/icon/iconName';
+import { IconNameType } from '~/types/icon/iconName';
 
 /* -- type, interface -- */
 interface IEmits {
@@ -47,8 +46,11 @@ interface IProps {
 
 /* -- props, emit -- */
 const props = withDefaults(defineProps<IProps>(), {
-  color: '#030300',
-  size: 'normal'
+  icon: undefined,
+  iconProps: undefined,
+  color: undefined,
+  size: 'normal',
+  to: undefined,
 })
 
 const emit = defineEmits<IEmits>()
@@ -61,6 +63,9 @@ const {
 /* -- state -- */
 
 /* -- variable(ref, reactive, computed) -- */
+const backgroundColor = computed(() => {
+  return props.color ? props.color : color.value.theme.text
+})
 
 /* -- function -- */
 const click = () => {
@@ -80,7 +85,7 @@ const click = () => {
 
   border: none;
   border-radius: 8px;
-  background-color: v-bind('props.color');
+  background-color: v-bind("backgroundColor");
   cursor: pointer;
   outline: none;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -95,7 +100,7 @@ const click = () => {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
-    color: v-bind('dependsLuminanceColor(props.color)');
+    color: v-bind('dependsLuminanceColor(backgroundColor)');
 
     justify-content: center;
     align-items: center;
@@ -168,6 +173,10 @@ const click = () => {
     height: 40px;
 
     background-color: transparent;
+
+    &:hover::before {
+      border-radius: 50%;
+    }
 
     .text {
       height: calc(100% - 16px);

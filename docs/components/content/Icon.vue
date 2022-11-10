@@ -5,7 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { IconNameType } from '~~/types/icon/iconName';
+import { useColorStore } from '~/store/colorStore';
+import { IconNameType } from '~/types/icon/iconName';
 
 /* -- type, interface -- */
 export interface IProps {
@@ -18,14 +19,18 @@ export interface IProps {
 
 /* -- props, emit -- */
 const props = withDefaults(defineProps<IProps>(), {
-  icon: 'face',
+  icon: undefined,
   size: '24px',
-  color: null,
+  color: undefined,
   fill: false,
   wght: 500
 })
 
 /* -- store -- */
+const {
+  color
+} = useColorStore()
+
 /* -- variable(ref, reactive, computed) -- */
 /* -- function -- */
 /* -- watch -- */
@@ -36,7 +41,7 @@ const props = withDefaults(defineProps<IProps>(), {
 .material-icons-outlined, .material-icons-round {
   font-size: v-bind("props.size");
   font-weight: v-bind('props.wght');
-  color: v-bind('props.color');
+  color: v-bind("props.color ? props.color : color.theme.text");
   user-select: none;
 }
 </style>
