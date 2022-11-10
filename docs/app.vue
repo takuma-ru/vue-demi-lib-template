@@ -36,12 +36,8 @@ html, body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.light-mode #app {
-  background-color: #F2F2F2;
-  color: v-bind("color.theme.text");
-}
-.dark-mode #app {
-  background-color: #171717;
+#app {
+  background-color: v-bind("color.theme.background");
   color: v-bind("color.theme.text");
 }
 

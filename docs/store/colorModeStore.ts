@@ -1,7 +1,5 @@
 import { useColorStore } from './colorStore'
 
-type ColorModeType = 'light' | 'dark'
-
 export const useColorModeStore = () => {
   useColorStore()
 
