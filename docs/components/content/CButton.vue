@@ -69,7 +69,7 @@ const backgroundColor = computed(() => {
 
 /* -- function -- */
 const click = () => {
-  props.to ? navigateTo(props.to) : emit('click')
+  props.to ? navigateTo(props.to, { external: true }) : emit('click')
 }
 
 /* -- watch -- */

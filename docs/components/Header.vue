@@ -11,6 +11,12 @@
     </div>
     <div class="buttons">
       <Button
+        is-icon
+        to="https://github.com/takuma-ru"
+      >
+        <LogosGithub />
+      </Button>
+      <Button
         :icon="colorMode === 'dark' ? 'dark_mode': 'light_mode'"
         is-icon
         @click="switchMode()"
@@ -22,6 +28,7 @@
 <script lang="ts" setup>
 import Button from '~/components/content/CButton.vue'
 import { useColorModeStore } from '~/store/colorModeStore';
+import { useColorStore } from '~/store/colorStore';
 
 /* -- type, interface -- */
 
@@ -32,6 +39,10 @@ const {
   colorMode,
   switchMode
 } = useColorModeStore()
+
+const {
+  color
+} = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
 /* -- function -- */
