@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/content'],
 
   vite: {
     plugins: [
