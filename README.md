@@ -151,7 +151,7 @@ yarn
 Because of the use of "--watch", files are automatically rebuilt when they are modified.
 Automatically generates `.d.ts` files.
 ```md
-yarn build:lib
+yarn dev:lib
 ```
 
 #### 3. Test for `vue3`

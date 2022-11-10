@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Header />
     <NuxtPage />
     <NuxtLoading ref="loading" />
@@ -9,10 +9,16 @@
 <script lang="ts" setup>
 import 'material-icons/iconfont/material-icons.css'
 import NuxtLoading from './components/layouts/NuxtLoading.vue';
-
-const loading = ref(null)
+import { useColorModeStore } from './store/colorModeStore';
+import { useColorStore } from './store/colorStore';
 
 const nuxtApp = useNuxtApp()
+
+const loading = ref(null)
+const { setSytemMode } = useColorModeStore()
+const { color } = useColorStore()
+
+setSytemMode()
 
 nuxtApp.hook('page:start', () => {
   loading.value.start()
@@ -30,10 +36,19 @@ html, body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.light-mode #app {
+  background-color: #F2F2F2;
+  color: v-bind("color.theme.text");
+}
+.dark-mode #app {
+  background-color: #171717;
+  color: v-bind("color.theme.text");
+}
+
 main {
-  width: min(100vw, 960px);
+  width: min(calc(100vw - 64px), 800px);
   min-height: calc(100vh - 64px - 64px);
-  padding: 32px;
+  padding: 2rem;
   margin: auto;
 }
 </style>
