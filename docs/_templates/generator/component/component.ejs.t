@@ -3,7 +3,7 @@ to: <%= atomic %>/<%= h.changeCase.pascal(componentName) %>.vue
 ---
 
 <template>
-  <div class="<%= h.changeCase.camel(componentName)  %>">
+  <div id="<%= h.changeCase.camel(componentName)  %>">
   </div>
 </template>
 
@@ -14,13 +14,13 @@ export interface IProps {
 }
 <% } -%>
 
+/* -- store -- */
+
 /* -- props, emit -- */
 <% if (isProps) { -%>
 const props = withDefaults(defineProps<IProps>(), {
 })
 <% } -%>
-
-/* -- store -- */
 
 /* -- variable(ref, reactive, computed) -- */
 
@@ -32,7 +32,7 @@ const props = withDefaults(defineProps<IProps>(), {
 </script>
 
 <style lang="scss" scoped>
-.<%= h.changeCase.camel(componentName)  %> {
+#<%= h.changeCase.camel(componentName)  %> {
 
 }
 </style>
