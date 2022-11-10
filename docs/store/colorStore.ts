@@ -1,4 +1,4 @@
-import { ColorsInterface } from "~~/types/store/colorStore"
+import { ColorsInterface } from "~/types/store/colorStore"
 
 const colorPallet: ColorsInterface = {
   white: {

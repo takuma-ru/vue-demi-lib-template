@@ -14,7 +14,7 @@ import { useColorStore } from './store/colorStore';
 
 const nuxtApp = useNuxtApp()
 
-const loading = ref(null)
+const loading = ref()
 const { setSytemMode } = useColorModeStore()
 const { color } = useColorStore()
 
