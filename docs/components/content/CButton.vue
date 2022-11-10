@@ -5,6 +5,7 @@
     :size="!isIcon && size"
     :fab="fab"
     :icon="isIcon"
+    :outlined="outlined"
     @click="click()"
   >
     <div class="text">
@@ -41,6 +42,7 @@ interface IProps {
   size?: 'small' | 'normal' | 'large'
   fab?: boolean
   isIcon?: boolean
+  outlined? :boolean
   to?: string
 }
 
@@ -92,6 +94,10 @@ const click = () => {
 
   .text {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
     position: relative;
     z-index: 1;
     height: 24px;
@@ -101,10 +107,7 @@ const click = () => {
     font-size: 16px;
     font-weight: 500;
     color: v-bind('dependsLuminanceColor(backgroundColor)');
-
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
+    white-space: nowrap;
   }
 
   &:hover::before {
@@ -183,6 +186,16 @@ const click = () => {
 
       padding: 0px;
       margin: 0px;
+    }
+  }
+
+  &[outlined = true] {
+    background-color: transparent;
+
+    border: solid 2px v-bind("color.theme.subText");
+    .text {
+      color: v-bind("color.theme.text");
+      font-weight: 600;
     }
   }
 
