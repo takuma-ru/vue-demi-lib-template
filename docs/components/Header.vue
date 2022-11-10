@@ -1,6 +1,9 @@
 <template>
   <header id="app-header">
-    <div class="title">
+    <div
+      class="title"
+      @click="moveToIndex"
+    >
       <img
         src="https://nuxtjs.org/design-kit/colored-logo.svg"
         alt="logo"
@@ -46,6 +49,9 @@ const {
 
 /* -- variable(ref, reactive, computed) -- */
 /* -- function -- */
+const moveToIndex = () => {
+  navigateTo('/')
+}
 /* -- watch -- */
 /* -- life cycle -- */
 </script>
@@ -64,6 +70,8 @@ const {
   .title {
     display: flex;
     align-items: center;
+
+    cursor: pointer;
 
     img {
       width: 32px;

@@ -161,7 +161,7 @@ export default {
   width: 0%;
   opacity: 1;
   transition: width 0.1s, opacity 0.4s;
-  background-color: #F60102;
+  background-color: #5ccb96;
   z-index: 999999;
 }
 
@@ -170,6 +170,6 @@ export default {
 }
 
 .nuxt-progress-failed {
-  background-color: #F60102;
+  background-color: #5ccb96;
 }
 </style>
