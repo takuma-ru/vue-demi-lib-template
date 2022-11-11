@@ -14,12 +14,22 @@ export interface IProps {
 }
 <% } -%>
 
+<% if (isEmit) { -%>
+interface IEmits {
+  (e: 'click'): void
+}
+<% } -%>
+
 /* -- store -- */
 
 /* -- props, emit -- */
 <% if (isProps) { -%>
 const props = withDefaults(defineProps<IProps>(), {
 })
+<% } -%>
+
+<% if (isEmit) { -%>
+const emit = defineEmits<IEmits>()
 <% } -%>
 
 /* -- variable(ref, reactive, computed) -- */
