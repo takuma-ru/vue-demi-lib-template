@@ -14,7 +14,10 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content'],
+  modules: [
+    '@nuxt/content',
+    '@vueuse/nuxt',
+  ],
 
   vite: {
     plugins: [
