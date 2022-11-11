@@ -2,9 +2,9 @@
 to: store/<%= h.changeCase.camel(storeName) %>Store.ts
 ---
 <% if (isInterface) { -%>
-import { I<%= h.changeCase.pascal(storeName) %> } from '~~/types/store/<%= h.changeCase.camel(storeName) %>Store'
+import { I<%= h.changeCase.pascal(storeName) %> } from '~/types/store/<%= h.changeCase.camel(storeName) %>Store'
 <% } else { -%>
-import { <%= h.changeCase.pascal(storeName) %>Type } from '~~/types/store/<%= h.changeCase.camel(storeName) %>Store'
+import { <%= h.changeCase.pascal(storeName) %>Type } from '~/types/store/<%= h.changeCase.camel(storeName) %>Store'
 <% } -%>
 
 export const use<%= h.changeCase.pascal(storeName) %>Store = () => {

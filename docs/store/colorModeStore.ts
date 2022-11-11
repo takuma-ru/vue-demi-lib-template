@@ -26,7 +26,7 @@ export const useColorModeStore = () => {
 
   const setSytemMode = () => {
     onBeforeMount(() => {
-      const isDarkMode = localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
+      const isDarkMode = localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') === 'dark' : useMediaQuery('(prefers-color-scheme: dark)').value
       if (isDarkMode) {
         colorMode.value = 'dark'
         useColorStore().setDarkTheme()

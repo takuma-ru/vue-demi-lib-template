@@ -1,4 +1,4 @@
-import { useColorStore } from '~~/store/colorStore'
+import { useColorStore } from '~/store/colorStore'
 
 /**
  * 背景色から輝度を求め、テキストのカラーを返す関数

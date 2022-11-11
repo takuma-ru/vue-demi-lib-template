@@ -8,7 +8,10 @@
         src="https://nuxtjs.org/design-kit/colored-logo.svg"
         alt="logo"
       >
-      <div class="text">
+      <div
+        v-if="screenType !== 'sp'"
+        class="text"
+      >
         lib-name
       </div>
     </div>
@@ -30,6 +33,7 @@
 
 <script lang="ts" setup>
 import Button from '~/components/content/CButton.vue'
+import { useScreenType } from '~/hooks/utils/screenType';
 import { useColorModeStore } from '~/store/colorModeStore';
 import { useColorStore } from '~/store/colorStore';
 
@@ -48,6 +52,10 @@ const {
 } = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
+const {
+  screenType
+} = useScreenType()
+
 /* -- function -- */
 const moveToIndex = () => {
   navigateTo('/')
