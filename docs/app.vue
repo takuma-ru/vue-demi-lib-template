@@ -57,4 +57,19 @@ main {
   padding: 2rem;
   margin: auto;
 }
+
+.sub-text {
+  color: v-bind("color.theme.subText")
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  bottom: 0px;
+  margin: 1rem 0px;
+
+  background-color: v-bind("color.theme.subText");
+  border: none;
+}
+
 </style>

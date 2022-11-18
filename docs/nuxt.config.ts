@@ -19,6 +19,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
+  content: {
+    highlight: {
+      theme: 'dark-plus',
+      preload: ['html', 'css', 'ts', 'js', 'vue','r', 'cmd']
+    }
+  },
+
   vite: {
     plugins: [
       eslintPlugin()
