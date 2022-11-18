@@ -12,7 +12,7 @@
       <Icon
         v-if="icon"
         :icon="icon"
-        :color="!isIcon ? dependsLuminanceColor(backgroundColor) : null"
+        :color="!isIcon ? dependsLuminanceColor(backgroundColor) : undefined"
         size="24px"
         :fill="props.iconProps?.fill"
         :wght="props.iconProps?.wght"
