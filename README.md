@@ -140,7 +140,7 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 ## Getting Started
 
 #### 0. Click to "Use this template"
-[![195748948-7f5a784f-6fb1-4205-b23f-0c9b72ac5c82](https://user-images.githubusercontent.com/49429291/195749502-7ea4d2b1-145d-4c20-9ab8-820b91b88a08.png)](https://github.com/takuma-ru/takuma-ru-react-template/generate)
+[![use-this-temp-button](https://user-images.githubusercontent.com/49429291/202691047-cdf8ce37-1be6-47fa-898c-f143b2773aca.png)](https://github.com/takuma-ru/takuma-ru-react-template/generate)
 
 #### 1. Install node_modules
 ```md
