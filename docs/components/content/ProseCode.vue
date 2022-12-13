@@ -89,6 +89,8 @@ onMounted(() => {
   .directory {
     display: flex;
     align-content: center;
+
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
 }
 

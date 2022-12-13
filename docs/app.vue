@@ -13,7 +13,10 @@ const nuxtApp = useNuxtApp()
 /* -- type, interface -- */
 
 /* -- store -- */
-const { setSytemMode } = useColorModeStore()
+const {
+  colorMode,
+  setSytemMode
+} = useColorModeStore()
 const { color } = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
@@ -40,6 +43,23 @@ nuxtApp.hook('page:finish', () => {
 html, body {
   margin: 0px;
   font-family: 'Noto Sans JP', sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: v-bind("color.theme.complementaryDarken[1]");
+      border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-color: v-bind("colorMode === 'dark' ? color.black.lighten[1]: color.black.lighten[2]");
+    background-clip: content-box;
+  }
 }
 
 #app {
@@ -49,7 +69,9 @@ html, body {
 
 main {
   width: min(calc(100vw - 64px), 800px);
-  min-height: calc(100vh - 64px - 64px);
+  height: calc(100vh - 64px - 64px);
+
+  overflow-y: auto;
   padding: 2rem;
   margin: auto;
 }
