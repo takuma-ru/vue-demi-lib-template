@@ -69,7 +69,8 @@ const moveToIndex = () => {
   height: 64px;
   padding: 0px 32px;
   margin: auto;
-  border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.white.darken[2]");
+  border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
+  box-sizing: border-box;
 
   .title {
     display: flex;

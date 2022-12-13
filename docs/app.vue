@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import 'material-icons/iconfont/material-icons.css'
+import 'material-symbols';
 
 const nuxtApp = useNuxtApp()
 /* -- type, interface -- */

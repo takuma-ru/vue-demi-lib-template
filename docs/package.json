@@ -9,6 +9,9 @@
     "preview": "nuxt preview",
     "hygen": "hygen",
     "hygen:component": "yarn hygen generator component",
+    "hygen:composable": "yarn hygen generator composable",
+    "hygen:page": "yarn hygen generator page",
+    "hygen:util": "yarn hygen generator util",
     "lint": "eslint --fix --ext \".js,.ts,.vue\" --ignore-path .gitignore ."
   },
   "devDependencies": {
@@ -23,7 +26,7 @@
     "nuxt": "^3.0.0"
   },
   "dependencies": {
-    "material-icons": "^1.12.1",
+    "material-symbols": "^0.4.2",
     "vite-plugin-eslint": "^1.8.1"
   }
 }
