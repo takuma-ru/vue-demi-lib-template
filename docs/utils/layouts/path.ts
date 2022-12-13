@@ -9,7 +9,7 @@ export const usePath = () => {
     icon: IconNameType
     paths: Array<{
       path: string
-      pathName: string
+      name: string
     }>
   }
 
@@ -18,18 +18,23 @@ export const usePath = () => {
       title: 'Get Started',
       icon: 'start',
       paths: [
-        { pathName: 'vue2', path: '/get-started/vue2' },
-        { pathName: 'vue2.7, vue3', path: '/get-started/vue3' },
-        { pathName: 'nuxt2', path: '/get-started/nuxt2' },
-        { pathName: 'nuxt3', path: '/get-started/nuxt3' },
+        { name: 'vue2', path: '/get-started/vue2' },
+        { name: 'vue2.7, vue3', path: '/get-started/vue3' },
+        { name: 'nuxt2', path: '/get-started/nuxt2' },
+        { name: 'nuxt3', path: '/get-started/nuxt3' },
+      ]
+    },
+    {
+      title: 'Components',
+      icon: 'category',
+      paths: [
+        { name: 'lib', path: '/components/lib' },
       ]
     }
   ]
 
   const isNowPath = (path: string): boolean => {
     const route = useRoute()
-
-    console.log(route.fullPath)
 
     return route.fullPath === path
   }

@@ -63,7 +63,7 @@ const colorPallet: ColorsInterface = {
       2: '#beead5'
     },
     darken: {
-      1: '#377a5a',
+      1: '#266E4B',
       2: '#25513c'
     }
   },

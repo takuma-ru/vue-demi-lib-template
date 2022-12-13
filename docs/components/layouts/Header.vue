@@ -9,7 +9,7 @@
         alt="logo"
       >
       <div
-        v-if="screenType !== 'sp'"
+        v-if="displayType !== 'sm'"
         class="text"
       >
         lib-name
@@ -48,8 +48,8 @@ const {
 
 /* -- variable(ref, reactive, computed) -- */
 const {
-  screenType
-} = useScreenType()
+  displayType
+} = displayStatus()
 
 /* -- function -- */
 const moveToIndex = () => {
@@ -65,9 +65,9 @@ const moveToIndex = () => {
   align-items: center;
   justify-content: space-between;
 
-  width: min(calc(100vw - 64px), 800px);
+  width: min(calc(100vw), calc(800px));
   height: 64px;
-  padding: 0px 32px;
+  padding: 2rem;
   margin: auto;
   border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
   box-sizing: border-box;
