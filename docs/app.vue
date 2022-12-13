@@ -8,10 +8,6 @@
 
 <script lang="ts" setup>
 import 'material-icons/iconfont/material-icons.css'
-import NuxtLoading from './components/layouts/NuxtLoading.vue';
-import { useColorModeStore } from './store/colorModeStore';
-import { useColorStore } from './store/colorStore';
-import { useScreenType } from '~/hooks/utils/screenType'
 
 const nuxtApp = useNuxtApp()
 /* -- type, interface -- */

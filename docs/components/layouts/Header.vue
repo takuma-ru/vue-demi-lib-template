@@ -16,13 +16,13 @@
       </div>
     </div>
     <div class="buttons">
-      <Button
+      <BaseButton
         is-icon
         to="https://github.com/takuma-ru"
       >
-        <LogosGithub />
-      </Button>
-      <Button
+        <Github />
+      </BaseButton>
+      <BaseButton
         :icon="colorMode === 'dark' ? 'dark_mode': 'light_mode'"
         is-icon
         @click="switchMode()"
@@ -32,11 +32,6 @@
 </template>
 
 <script lang="ts" setup>
-import Button from '~/components/content/CButton.vue'
-import { useScreenType } from '~/hooks/utils/screenType';
-import { useColorModeStore } from '~/store/colorModeStore';
-import { useColorStore } from '~/store/colorStore';
-
 /* -- type, interface -- */
 
 /* -- props, emit -- */
@@ -74,6 +69,7 @@ const moveToIndex = () => {
   height: 64px;
   padding: 0px 32px;
   margin: auto;
+  border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.white.darken[2]");
 
   .title {
     display: flex;

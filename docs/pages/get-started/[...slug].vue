@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/store/colorStore';
+import { useColorStore } from '~/composables/colorStore';
 
 const {
   color

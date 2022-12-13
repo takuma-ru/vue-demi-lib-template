@@ -14,6 +14,25 @@ export default defineNuxtConfig({
     },
   },
 
+  components: {
+    dirs: [
+      'components/content',
+      'components/layouts',
+      'components/logos'
+    ]
+  },
+
+  imports: {
+    dirs: [
+      'composables',
+      'composables/**/*.{ts,js,mjs,mts}',
+      'composables/**',
+      'utils',
+      'utils/**/*.{ts,js,mjs,mts}',
+      'utils/**'
+    ]
+  },
+
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt',

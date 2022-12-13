@@ -10,23 +10,23 @@
       takuma-ru
     </h1>
     <div class="buttons">
-      <CButton
+      <BaseButton
         to="/get-started/vue2"
       >
         Get Started
-      </CButton>
-      <CButton
+      </BaseButton>
+      <BaseButton
         outlined
         to="https://github.com/takuma-ru"
       >
         View on GitHub
-      </CButton>
+      </BaseButton>
     </div>
   </main>
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/store/colorStore';
+import { useColorStore } from '~/composables/colorStore';
 
 const {
   color

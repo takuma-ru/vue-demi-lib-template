@@ -8,18 +8,19 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "hygen": "hygen",
+    "hygen:component": "yarn hygen generator component",
     "lint": "eslint --fix --ext \".js,.ts,.vue\" --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@nuxt/content": "^2.2.0",
+    "@nuxt/content": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
-    "@vueuse/core": "^9.5.0",
-    "@vueuse/nuxt": "^9.5.0",
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
     "eslint": "^8.26.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.7.0",
-    "nuxt": "^3.0.0-rc.13"
+    "nuxt": "^3.0.0"
   },
   "dependencies": {
     "material-icons": "^1.12.1",

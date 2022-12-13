@@ -13,8 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/store/colorStore';
-
 const {
   color
 } = useColorStore()

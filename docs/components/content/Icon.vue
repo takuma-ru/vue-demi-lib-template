@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/store/colorStore';
 import { IconNameType } from '~/types/icon/iconName';
 
 /* -- type, interface -- */
