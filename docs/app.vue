@@ -69,7 +69,7 @@ html, body {
   }
 
   ::-webkit-scrollbar-thumb {
-    border: 3px solid transparent;
+    border: 4px solid transparent;
     border-radius: 8px;
     background-color: v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
     background-clip: content-box;

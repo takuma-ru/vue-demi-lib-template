@@ -157,11 +157,12 @@ export default {
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 2px;
+  height: 4px;
   width: 0%;
   opacity: 1;
   transition: width 0.1s, opacity 0.4s;
-  background-color: #5ccb96;
+  background: rgb(92,203,150);
+  background: linear-gradient(90deg, rgba(92,203,150,1) 0%, rgba(0,90,194,1) 100%);
   z-index: 999999;
 }
 

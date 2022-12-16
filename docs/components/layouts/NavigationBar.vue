@@ -21,7 +21,7 @@
           :key="path.name"
           :style="{
             color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.lighten[1] : color.green.darken[1] : color.theme.subText,
-            fontWeight: isNowPath(path.path) ? 900 : 'normal',
+            fontWeight: isNowPath(path.path) ? 'bold' : 'normal',
           }"
           @click="navigateTo(path.path)"
         >
@@ -34,13 +34,6 @@
 
 <script lang="ts" setup>
 /* -- type, interface -- */
-export interface INavigationBarProps {
-  modelValue: any;
-}
-
-export interface INavigationBarEmits {
-  (e: 'update:modelValue'): void
-}
 
 /* -- store -- */
 const {
@@ -56,14 +49,8 @@ const {
 } = displayStatus()
 
 /* -- props, emit -- */
-const props = withDefaults(defineProps<INavigationBarProps>(), {
-  modelValue: false
-})
-
-const emit = defineEmits<INavigationBarEmits>()
 
 /* -- variable(ref, reactive, computed) -- */
-const vModel = useVModel(props, 'modelValue', emit)
 const {
   pathList,
   isNowPath
@@ -81,7 +68,10 @@ const {
   justify-self: end;
 
   width: 200px;
+  height: 100%;
   margin: 0px 1rem 2rem 0px;
+
+  overflow-y: auto;
 
   .section {
     display: grid;
@@ -101,7 +91,7 @@ const {
       grid-column: 2;
       grid-row: 1;
 
-      margin: 0 0 1rem 0;
+      margin: 0 0 0.5rem 0;
 
       font-weight: bold;
     }
@@ -117,7 +107,7 @@ const {
         display: inline-block;
 
         position: relative;
-        margin: 0 0 1rem 0;
+        margin: 0 0 0.5rem 0;
 
         text-decoration: none;
         cursor: pointer;
