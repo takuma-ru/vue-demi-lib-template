@@ -1,6 +1,6 @@
 ::get-started-page
 ---
-version: 'nuxt2'
+version: 'vue2'
 descriptions: 'In Vue 2.7 and Vue 3 series, you can easily implement it in the following way!'
 ---
 

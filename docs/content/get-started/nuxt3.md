@@ -1,14 +1,12 @@
 ::get-started-page
 ---
-version: 'nuxt2'
+version: 'nuxt3'
 descriptions: 'In Vue 2.7 and Vue 3 series, you can easily implement it in the following way!'
 ---
 ### 1. Install
 ```cmd
 yarn add @takuma-ru/vue-swipe-modal@^4.0.0
 ```
-
----
 
 ### 2. Add plugin file
 Create a plugins folder and a file named `swipe-modal.ts`.
@@ -22,25 +20,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('swipe-modal', swipeModal)
 })
 ```
-
----
-
-### 3. Update nuxt.config
-Add the following code to the item named `plugins[]`.
-
-
-```ts{}[@/nuxt.config.js | .ts]
-...
-
-plugins: [
-  { src: '/plugins/vue-swipe-modal.ts', mode: 'client' }
-],
-
-...
-```
-
-
----
 
 ### 4. Done!
 You can use the `<swipe-modal>` tag in the vue file.

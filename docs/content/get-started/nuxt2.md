@@ -10,8 +10,6 @@ This library works with `@vue-composition-api`, so it should be installed togeth
 yarn add @takuma-ru/vue-swipe-modal@^4.0.0 @vue/composition-api
 ```
 
----
-
 ### 2. Add plugin file
 Create a plugins folder and a file named `swipe-modal.js`.
 
@@ -23,8 +21,6 @@ import swipeModal from '@takuma-ru/vue-swipe-modal'
 
 Vue.component('swipe-modal', swipeModal)
 ```
-
----
 
 ### 3. Update nuxt.config
 Add the following code to the item named `plugins[]`.
@@ -39,9 +35,6 @@ plugins: [
 
 ...
 ```
-
-
----
 
 ### 4. Done!
 You can use the `<swipe-modal>` tag in the vue file.
