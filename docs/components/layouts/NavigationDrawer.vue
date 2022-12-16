@@ -7,6 +7,15 @@
       v-if="isOpenDrawer && displayType === 'sm' && !isNowPath('/')"
       id="navigationDrawer"
     >
+      <BaseButton
+        is-icon
+        :icon-props="{
+          size: '40px'
+        }"
+        icon="chevron_left"
+        class="close-button"
+        @click="updateIsOpenDrawer(false)"
+      />
       <div
         v-for="sectionData in pathList"
         :key="sectionData.title"
@@ -57,6 +66,10 @@ const {
   color
 } = useColorStore()
 
+const {
+  updateIsOpenDrawer
+} = useNavigationControlStore()
+
 /* -- props, emit -- */
 
 /* -- variable(ref, reactive, computed) -- */
@@ -76,12 +89,21 @@ const {
 #navigationDrawer {
   justify-self: end;
 
+  position: relative;
   width: 200px;
   height: 100%;
   padding: 2rem;
   margin: 0px 1rem 2rem 0px;
 
   overflow-y: auto;
+
+  .close-button {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
 
   .section {
     display: grid;
