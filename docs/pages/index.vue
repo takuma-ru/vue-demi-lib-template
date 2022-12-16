@@ -11,12 +11,14 @@
     </h1>
     <div class="buttons">
       <BaseButton
+        icon="start"
         to="/get-started/vue2"
       >
         Get Started
       </BaseButton>
       <BaseButton
         outlined
+        icon="open_in_new"
         to="https://github.com/takuma-ru"
       >
         View on GitHub
@@ -69,9 +71,12 @@ const {
 
   .buttons {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 
     #Button {
-      margin-right: 1.5rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
     }
   }
 }

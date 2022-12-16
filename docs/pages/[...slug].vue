@@ -1,8 +1,10 @@
 <template>
   <div class="contents">
-    <NavigationBar />
     <main>
-      <ContentDoc />
+      <NavigationBar />
+      <div class="page">
+        <ContentDoc />
+      </div>
     </main>
   </div>
 </template>
@@ -24,6 +26,15 @@ const {
 
   main {
     grid-column: 2;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .page {
+      padding-right: 0.5rem;
+
+      overflow-y: auto;
+    }
 
     h1, h2, h3, h4, p {
       margin: 0px;

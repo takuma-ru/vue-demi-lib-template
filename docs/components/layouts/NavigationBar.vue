@@ -20,8 +20,8 @@
           v-for="path in sectionData.paths"
           :key="path.name"
           :style="{
-            color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.lighten[1] : color.green.default : color.theme.text,
-            fontWeight: isNowPath(path.path) ? 'bold' : 'normal',
+            color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.lighten[1] : color.green.darken[1] : color.theme.subText,
+            fontWeight: isNowPath(path.path) ? 900 : 'normal',
           }"
           @click="navigateTo(path.path)"
         >
@@ -81,7 +81,7 @@ const {
   justify-self: end;
 
   width: 200px;
-  margin: 2rem 0px;
+  margin: 0px 1rem 2rem 0px;
 
   .section {
     display: grid;
@@ -94,7 +94,7 @@ const {
       grid-column: 1;
       grid-row: 1;
 
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
 
     .sction-title {
@@ -103,7 +103,7 @@ const {
 
       margin: 0 0 1rem 0;
 
-      font-weight: 900;
+      font-weight: bold;
     }
 
     .paths {

@@ -65,7 +65,7 @@ const moveToIndex = () => {
   align-items: center;
   justify-content: space-between;
 
-  width: min(calc(100vw), calc(800px));
+  width: min(calc(100vw), 1024px);
   height: 64px;
   padding: 2rem;
   margin: auto;
