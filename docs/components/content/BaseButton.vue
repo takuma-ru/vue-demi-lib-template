@@ -12,7 +12,7 @@
       <Icon
         v-if="icon"
         :icon="icon"
-        :color="!isIcon ? dependsLuminanceColor(backgroundColor) : undefined"
+        :color="!isIcon && !outlined ? dependsLuminanceColor(backgroundColor) : undefined"
         size="24px"
         :fill="props.iconProps?.fill"
         :wght="props.iconProps?.wght"
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { IProps as IIconProps } from '~/components/content/Icon.vue'
+import { IIconProps } from '~/components/content/Icon.vue'
 import { IconNameType } from '~/types/icon/iconName';
 
 /* -- type, interface -- */
