@@ -20,7 +20,7 @@
           v-for="path in sectionData.paths"
           :key="path.name"
           :style="{
-            color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.lighten[1] : color.green.darken[1] : color.theme.subText,
+            color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.default : color.green.darken[1] : color.theme.subText,
             fontWeight: isNowPath(path.path) ? 'bold' : 'normal',
           }"
           @click="navigateTo(path.path)"
@@ -46,7 +46,7 @@ const {
 
 const {
   displayType
-} = displayStatus()
+} = displayStatusStore()
 
 /* -- props, emit -- */
 

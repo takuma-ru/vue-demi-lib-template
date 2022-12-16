@@ -28,8 +28,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/composables/colorStore';
-
 const {
   color
 } = useColorStore()

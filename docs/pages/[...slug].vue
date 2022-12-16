@@ -1,5 +1,6 @@
 <template>
   <div class="contents">
+    <NavigationDrawer />
     <main>
       <NavigationBar />
       <div class="page">
@@ -10,8 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { useColorStore } from '~/composables/colorStore';
-
 const {
   color
 } = useColorStore()

@@ -1,18 +1,25 @@
 <template>
   <header id="app-header">
-    <div
-      class="title"
-      @click="moveToIndex"
-    >
-      <img
-        src="https://nuxtjs.org/design-kit/colored-logo.svg"
-        alt="logo"
-      >
+    <div class="right-contents">
+      <NavigationButton
+        :style="{
+          marginRight: '0.5rem'
+        }"
+      />
       <div
-        v-if="displayType !== 'sm'"
-        class="text"
+        class="title"
+        @click="moveToIndex"
       >
-        lib-name
+        <img
+          src="https://nuxtjs.org/design-kit/colored-logo.svg"
+          alt="logo"
+        >
+        <div
+          v-if="displayType !== 'sm'"
+          class="text"
+        >
+          lib-name
+        </div>
       </div>
     </div>
     <div class="buttons">
@@ -49,7 +56,7 @@ const {
 /* -- variable(ref, reactive, computed) -- */
 const {
   displayType
-} = displayStatus()
+} = displayStatusStore()
 
 /* -- function -- */
 const moveToIndex = () => {
@@ -67,10 +74,14 @@ const moveToIndex = () => {
 
   width: min(calc(100vw), 1024px);
   height: 64px;
-  padding: 2rem;
+  padding: 1rem;
   margin: auto;
   border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
   box-sizing: border-box;
+
+  .right-contents {
+    display: flex;
+  }
 
   .title {
     display: flex;
@@ -81,10 +92,11 @@ const moveToIndex = () => {
     img {
       width: 32px;
       height: 32px;
-      margin-right: 1em;
     }
 
     .text {
+      margin-left: 1em;
+
       font-size: 1.5em;
       font-weight: 500;
     }

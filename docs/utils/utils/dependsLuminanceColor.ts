@@ -1,5 +1,3 @@
-import { useColorStore } from '~/composables/colorStore'
-
 /**
  * 背景色から輝度を求め、テキストのカラーを返す関数
  * @param backgroundColor 背景色（#RRGGBB）
