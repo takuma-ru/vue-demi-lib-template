@@ -4,7 +4,7 @@
 export const displayStatus = () => {
   const breakpoints = useBreakpoints({
     sm: 640,
-    lp: 1025
+    lp: 1025 /* 864 + 240 + 240 */
   })
 
   /**
@@ -24,9 +24,9 @@ export const displayStatus = () => {
    * 現在のスクリーンタイプ
    * @return `'sm' | 'lp' | 'pc'`
    */
-  const displayType = computed(() => {
+  const displayType = useState('displayType', () => computed(() => {
     return sm.value ? 'sm' : lp.value ? 'lp' : 'pc'
-  })
+  }))
 
   /**
    * スクリーンタイプに応じてCSSを返す`<style>`v-bind向け関数

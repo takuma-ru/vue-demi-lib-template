@@ -6,7 +6,7 @@ export const useColorModeStore = () => {
   useColorStore()
 
   /* -- state -- */
-  const colorMode = useState<ColorModeType>('colorMode', () => ('dark'))
+  const colorMode = useState<ColorModeType>('colorMode', () => 'dark')
 
   /* -- actions -- */
   const setLight = () => {
@@ -25,16 +25,15 @@ export const useColorModeStore = () => {
   }
 
   const setSytemMode = () => {
-    onBeforeMount(() => {
-      const isDarkMode = localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') === 'dark' : useMediaQuery('(prefers-color-scheme: dark)').value
-      if (isDarkMode) {
-        colorMode.value = 'dark'
-        useColorStore().setDarkTheme()
-      } else {
-        colorMode.value = 'light'
-        useColorStore().setLightTheme()
-      }
-    })
+    const isDarkMode = usePreferredDark()
+
+    if (isDarkMode.value) {
+      colorMode.value = 'dark'
+      useColorStore().setDarkTheme()
+    } else {
+      colorMode.value = 'light'
+      useColorStore().setLightTheme()
+    }
   }
 
   watch(colorMode, (newVal) => {
