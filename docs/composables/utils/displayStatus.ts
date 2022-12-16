@@ -1,7 +1,7 @@
 /**
  * 現在のスクリーンの状態を元に動作する変数・関数群
  */
-export const displayStatus = () => {
+export const displayStatusStore = () => {
   const breakpoints = useBreakpoints({
     sm: 640,
     lp: 1025 /* 864 + 240 + 240 */
