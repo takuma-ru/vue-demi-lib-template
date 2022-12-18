@@ -7,15 +7,16 @@
       v-if="isOpenDrawer && displayType === 'sm' && !isNowPath('/')"
       id="navigationDrawer"
     >
-      <BaseButton
-        is-icon
-        :icon-props="{
-          size: '40px'
-        }"
-        icon="chevron_left"
+      <div
         class="close-button"
         @click="updateIsOpenDrawer(false)"
-      />
+      >
+        <BaseButton
+          is-icon
+          icon="chevron_left"
+        />
+        <span>close</span>
+      </div>
       <div
         v-for="sectionData in pathList"
         :key="sectionData.title"
@@ -91,18 +92,27 @@ const {
 
   position: relative;
   width: 200px;
-  height: 100%;
   padding: 2rem;
-  margin: 0px 1rem 2rem 0px;
+  padding-right: 3rem;
 
   overflow-y: auto;
 
   .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute;
     right: 0px;
     top: 50%;
 
     transform: translateY(-50%);
+    cursor: pointer;
+
+    span {
+      transform: rotate(-90deg);
+      color: v-bind("color.theme.subText");
+    }
   }
 
   .section {
