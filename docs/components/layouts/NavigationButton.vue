@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="displayType === 'sm' && !isNowPath('/')"
+    v-if="displayType === 'sm' && !isCurrentPath('/')"
     id="navigationButton"
   >
     <BaseButton
@@ -25,7 +25,7 @@ const {
 } = useNavigationControlStore()
 
 const {
-  isNowPath
+  isCurrentPath
 } = usePath()
 
 /* -- props, emit -- */

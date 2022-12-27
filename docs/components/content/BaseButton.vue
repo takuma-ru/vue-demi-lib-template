@@ -56,15 +56,13 @@ const props = withDefaults(defineProps<IProps>(), {
 const emit = defineEmits<IEmits>()
 
 /* -- store -- */
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 /* -- state -- */
 
 /* -- variable(ref, reactive, computed) -- */
 const backgroundColor = computed(() => {
-  return props.color ? props.color : color.value.theme.text
+  return props.color ? props.color : colorStore.color.theme.text
 })
 
 /* -- function -- */
@@ -144,7 +142,7 @@ const click = () => {
       left: 0px;
 
       border-radius: 8px;
-      background-color: v-bind('color.black.lighten[2]');
+      background-color: v-bind('colorStore.color.black.lighten[2]');
     }
   }
 
@@ -190,9 +188,9 @@ const click = () => {
   &[outlined = true] {
     background-color: transparent;
 
-    border: solid 2px v-bind("color.theme.subText");
+    border: solid 2px v-bind("colorStore.color.theme.subText");
     .text {
-      color: v-bind("color.theme.text");
+      color: v-bind("colorStore.color.theme.text");
       font-weight: 600;
     }
   }

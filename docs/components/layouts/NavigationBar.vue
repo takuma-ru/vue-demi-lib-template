@@ -20,8 +20,8 @@
           v-for="path in sectionData.paths"
           :key="path.name"
           :style="{
-            color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.default : color.green.darken[1] : color.theme.subText,
-            fontWeight: isNowPath(path.path) ? 'bold' : 'normal',
+            color: isCurrentPath(path.path) ? colorModeStore.colorMode === 'dark' ? colorStore.color.green.default : colorStore.color.green.darken[1] : colorStore.color.theme.subText,
+            fontWeight: isCurrentPath(path.path) ? 'bold' : 'normal',
           }"
           @click="navigateTo(path.path)"
         >
@@ -36,13 +36,9 @@
 /* -- type, interface -- */
 
 /* -- store -- */
-const {
-  colorMode
-} = useColorModeStore()
+const colorModeStore = useColorModeStore()
 
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 const {
   displayType
@@ -53,7 +49,7 @@ const {
 /* -- variable(ref, reactive, computed) -- */
 const {
   pathList,
-  isNowPath
+  isCurrentPath
 } = usePath()
 
 /* -- function -- */
@@ -120,7 +116,7 @@ const {
           bottom: -4px;
           left: 0;
 
-          background: v-bind("color.green.default");
+          background: v-bind("colorStore.color.green.default");
           border-radius: 1px;
           transform: scale(0, 1);
           transform-origin: left top;

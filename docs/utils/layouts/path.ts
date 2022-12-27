@@ -33,7 +33,7 @@ export const usePath = () => {
     }
   ]
 
-  const isNowPath = (path: string): boolean => {
+  const isCurrentPath = (path: string): boolean => {
     const route = useRoute()
 
     return route.fullPath === path
@@ -41,6 +41,6 @@ export const usePath = () => {
 
   return {
     pathList,
-    isNowPath
+    isCurrentPath
   }
 }

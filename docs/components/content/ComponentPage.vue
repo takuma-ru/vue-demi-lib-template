@@ -34,13 +34,9 @@ export interface IComponentPageProps {
 }
 
 /* -- store -- */
-const {
-  colorMode
-} = useColorModeStore()
+const colorModeStore = useColorModeStore()
 
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 /* -- props, emit -- */
 const props = withDefaults(defineProps<IComponentPageProps>(), {
@@ -67,7 +63,7 @@ const props = withDefaults(defineProps<IComponentPageProps>(), {
       padding: 2rem 1rem;
 
       border-radius: 0.5rem;
-      border: solid 2px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
+      border: solid 2px v-bind("colorModeStore.colorMode === 'dark' ? colorStore.color.black.lighten[1] : colorStore.color.black.lighten[2]");
     }
   }
 }

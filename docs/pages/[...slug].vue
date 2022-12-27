@@ -4,16 +4,24 @@
     <main>
       <NavigationBar />
       <div class="page">
-        <ContentDoc />
+        <ContentDoc>
+          <template #not-found>
+            <div
+              :style="{
+                backgroundColor: colorStore.color.theme.background,
+                width: '100%',
+                height: '100%'
+              }"
+            />
+          </template>
+        </ContentDoc>
       </div>
     </main>
   </div>
 </template>
 
 <script lang="ts" setup>
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 </script>
 
 <style lang="scss">
@@ -21,7 +29,7 @@ const {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
 
-  background-color: v-bind("color.theme.background");
+  background-color: v-bind("colorStore.color.theme.background");
 
   main {
     grid-column: 2;
@@ -48,11 +56,11 @@ const {
           content: '#';
           position: absolute;
           left: -1rem;
-          color: v-bind('color.theme.subText');
+          color: v-bind('colorStore.color.theme.subText');
         }
       }
       a {
-        color: v-bind('color.theme.text');
+        color: v-bind('colorStore.color.theme.text');
         text-decoration: none;
       }
     }

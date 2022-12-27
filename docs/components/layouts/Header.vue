@@ -30,9 +30,9 @@
         <Github />
       </BaseButton>
       <BaseButton
-        :icon="colorMode === 'dark' ? 'dark_mode': 'light_mode'"
+        :icon="colorModeStore.colorMode === 'dark' ? 'dark_mode': 'light_mode'"
         is-icon
-        @click="switchMode()"
+        @click="colorModeStore.switchMode()"
       />
     </div>
   </header>
@@ -44,14 +44,9 @@
 /* -- props, emit -- */
 
 /* -- store -- */
-const {
-  colorMode,
-  switchMode
-} = useColorModeStore()
+const colorModeStore = useColorModeStore()
 
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
 const {
@@ -76,7 +71,7 @@ const moveToIndex = () => {
   height: 64px;
   padding: 1rem;
   margin: auto;
-  border-bottom: solid 1px v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
+  border-bottom: solid 1px v-bind("colorModeStore.colorMode === 'dark' ? colorStore.color.black.lighten[1] : colorStore.color.black.lighten[2]");
   box-sizing: border-box;
 
   .right-contents {

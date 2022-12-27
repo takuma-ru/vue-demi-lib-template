@@ -13,9 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 </script>
 
 <style lang="scss">
@@ -28,7 +26,7 @@ const {
   svg {
     width: 20px;
     height: 20px;
-    fill: v-bind("color.theme.text");
+    fill: v-bind("colorStore.color.theme.text");
   }
 }
 </style>

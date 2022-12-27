@@ -4,7 +4,7 @@
     appear
   >
     <div
-      v-if="isOpenDrawer && displayType === 'sm' && !isNowPath('/')"
+      v-if="isOpenDrawer && displayType === 'sm' && !isCurrentPath('/')"
       id="navigationDrawer"
     >
       <div
@@ -34,8 +34,8 @@
             v-for="path in sectionData.paths"
             :key="path.name"
             :style="{
-              color: isNowPath(path.path) ? colorMode === 'dark' ? color.green.default : color.green.darken[1] : color.theme.subText,
-              fontWeight: isNowPath(path.path) ? 'bold' : 'normal',
+              color: isCurrentPath(path.path) ? colorModeStore.colorMode === 'dark' ? colorStore.color.green.default : colorStore.color.green.darken[1] : colorStore.color.theme.subText,
+              fontWeight: isCurrentPath(path.path) ? 'bold' : 'normal',
             }"
             @click="navigateTo(path.path)"
           >
@@ -59,13 +59,9 @@ const {
   displayType
 } = displayStatusStore()
 
-const {
-  colorMode
-} = useColorModeStore()
+const colorModeStore = useColorModeStore()
 
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 const {
   updateIsOpenDrawer
@@ -76,7 +72,7 @@ const {
 /* -- variable(ref, reactive, computed) -- */
 const {
   pathList,
-  isNowPath
+  isCurrentPath
 } = usePath()
 
 /* -- function -- */
@@ -111,7 +107,7 @@ const {
 
     span {
       transform: rotate(-90deg);
-      color: v-bind("color.theme.subText");
+      color: v-bind("colorStore.color.theme.subText");
     }
   }
 

@@ -28,9 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 </script>
 
 <style lang="scss" scoped>
@@ -48,7 +46,7 @@ const {
       top: -36px;
       left: 0px;
 
-      color: v-bind("color.theme.subText");
+      color: v-bind("colorStore.color.theme.subText");
       line-height: 36px;
       font-size: 16px;
       font-weight: 400;

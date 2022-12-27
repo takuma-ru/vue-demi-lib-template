@@ -13,10 +13,7 @@ const nuxtApp = useNuxtApp()
 /* -- type, interface -- */
 
 /* -- store -- */
-const {
-  colorMode,
-  setSytemMode
-} = useColorModeStore()
+const colorModeStore =useColorModeStore()
 const { color } = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
@@ -27,7 +24,6 @@ const loading = ref()
 /* -- watch -- */
 
 /* -- life cycle -- */
-setSytemMode()
 
 nuxtApp.hook('page:start', () => {
   loading.value.start()
@@ -71,7 +67,7 @@ html, body {
   ::-webkit-scrollbar-thumb {
     border: 4px solid transparent;
     border-radius: 8px;
-    background-color: v-bind("colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
+    background-color: v-bind("colorModeStore.colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
     background-clip: content-box;
   }
 }

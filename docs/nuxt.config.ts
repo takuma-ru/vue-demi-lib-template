@@ -36,6 +36,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt',
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: [
+          'defineStore'
+        ]
+      }
+    ]
   ],
 
   content: {

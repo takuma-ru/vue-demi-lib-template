@@ -4,7 +4,7 @@
  * @returns テキストカラー（#RRGGBB）
  */
 export const dependsLuminanceColor = (backgroundColor: string) => {
-  const { color } = useColorStore()
+  const colorStore = useColorStore()
 
   const backgroundColorCode = backgroundColor
   const red = backgroundColorCode.substring(1, 3)
@@ -16,5 +16,5 @@ export const dependsLuminanceColor = (backgroundColor: string) => {
 
   const isWhite = luminance < 0.6
 
-  return isWhite ? color.value.white.darken[2] : color.value.black.default
+  return isWhite ? colorStore.color.white.darken[2] : colorStore.color.black.default
 }

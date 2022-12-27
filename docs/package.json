@@ -28,7 +28,9 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
     "material-symbols": "^0.4.2",
+    "pinia": "^2.0.28",
     "vite-plugin-eslint": "^1.8.1"
   }
 }

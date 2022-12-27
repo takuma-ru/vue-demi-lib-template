@@ -29,9 +29,7 @@ const props = withDefaults(defineProps<IIconProps>(), {
 })
 
 /* -- store -- */
-const {
-  color
-} = useColorStore()
+const colorStore = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
 
@@ -46,7 +44,7 @@ const {
 .material-symbols-rounded {
   font-variation-settings: 'FILL' v-bind('props.fill ? 1 : 0'), 'wght' v-bind('props.wght'), 'GRAD' v-bind('props.grad'), 'opsz' v-bind('props.opsz');
   font-size: v-bind('props.size');
-  color: v-bind("props.color ? props.color : color.theme.text");
+  color: v-bind("props.color ? props.color : colorStore.color.theme.text");
   text-align: center;
   user-select: none;
 }
