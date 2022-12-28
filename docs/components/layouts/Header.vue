@@ -83,6 +83,7 @@ const moveToIndex = () => {
     align-items: center;
 
     cursor: pointer;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 
     img {
       width: 32px;

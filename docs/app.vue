@@ -78,6 +78,7 @@ html, body {
 }
 
 main {
+  position: relative;
   width: min(calc(100vw), 1024px);
   height: calc(100vh - 64px);
 

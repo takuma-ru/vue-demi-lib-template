@@ -29,12 +29,16 @@
 
 <script lang="ts" setup>
 const colorStore = useColorStore()
+const displayStatusStore = useDisplayStatusStore()
 </script>
 
 <style lang="scss" scoped>
 #index {
   display: flex;
   flex-flow: column;
+
+  padding: 2rem v-bind("displayStatusStore.displaySizeMixin({ sm: '1rem', lp: '1rem', pc: '2rem' })");
+  box-sizing: border-box;
 
   .title {
     position: relative;
