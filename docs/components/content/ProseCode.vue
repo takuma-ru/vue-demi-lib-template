@@ -76,13 +76,13 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
 
-  padding: 1em 16px;
+  padding: 0.5rem 16px;
 
   color: v-bind('colorStore.color.black.lighten[2]');
   font-size: 12px;
   font-weight: 500;
   border-radius: 0.5em 0.5em 0em 0em;
-  background-color: v-bind('colorStore.color.black.darken[1]');
+  background-color: v-bind('colorStore.color.black.darken[2]');
 
   .directory {
     display: flex;
@@ -125,9 +125,24 @@ onMounted(() => {
 
     text-align: center;
     border-radius: 0.4em;
-    background-color: v-bind('colorStore.color.black.darken[1]');
+    background-color: v-bind('colorStore.color.black.darken[2]');
     aspect-ratio: 1 / 1;
     cursor: pointer;
+
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    @keyframes fadeIn{
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
 
     span {
       position: absolute;
@@ -135,7 +150,7 @@ onMounted(() => {
       left: 50%;
       transform: translate(-50%, -50%);
 
-      color: v-bind('colorStore.color.black.lighten[1]');
+      color: v-bind('colorStore.color.black.lighten[2]');
     }
   }
 }

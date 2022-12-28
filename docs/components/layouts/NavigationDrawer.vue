@@ -103,7 +103,9 @@ const {
     top: 50%;
 
     transform: translateY(-50%);
+    user-select: none;
     cursor: pointer;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 
     span {
       transform: rotate(-90deg);
