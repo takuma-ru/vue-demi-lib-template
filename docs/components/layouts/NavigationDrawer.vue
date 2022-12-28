@@ -92,6 +92,7 @@ const {
   padding-right: 3rem;
 
   overflow-y: auto;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 
   .close-button {
     display: flex;

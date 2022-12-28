@@ -14,7 +14,7 @@ const nuxtApp = useNuxtApp()
 
 /* -- store -- */
 const colorModeStore =useColorModeStore()
-const { color } = useColorStore()
+const colorStore = useColorStore()
 
 /* -- variable(ref, reactive, computed) -- */
 const loading = ref()
@@ -65,28 +65,27 @@ html, body {
   }
 
   ::-webkit-scrollbar-thumb {
-    border: 4px solid transparent;
+    border: 4.5px solid transparent;
     border-radius: 8px;
-    background-color: v-bind("colorModeStore.colorMode === 'dark' ? color.black.lighten[1] : color.black.lighten[2]");
+    background-color: v-bind("colorModeStore.colorMode === 'dark' ? colorStore.color.black.lighten[1] : colorStore.color.black.lighten[2]");
     background-clip: content-box;
   }
 }
 
 #app {
-  background-color: v-bind("color.theme.background");
-  color: v-bind("color.theme.text");
+  background-color: v-bind("colorStore.color.theme.background");
+  color: v-bind("colorStore.color.theme.text");
 }
 
 main {
-  width: min(calc(100vw - 64px), 1024px);
-  height: calc(100vh - 64px - 64px);
+  width: min(calc(100vw), 1024px);
+  height: calc(100vh - 64px);
 
-  padding: 2rem;
   margin: auto;
 }
 
 .sub-text {
-  color: v-bind("color.theme.subText")
+  color: v-bind("colorStore.color.theme.subText")
 }
 
 hr {
@@ -95,7 +94,7 @@ hr {
   bottom: 0px;
   margin: 1rem 0px;
 
-  background-color: v-bind("color.theme.subText");
+  background-color: v-bind("colorStore.color.theme.subText");
   border: none;
 }
 

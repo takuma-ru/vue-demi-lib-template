@@ -22,6 +22,8 @@
 
 <script lang="ts" setup>
 const colorStore = useColorStore()
+const displayStatusStore = useDisplayStatusStore()
+
 </script>
 
 <style lang="scss">
@@ -38,7 +40,7 @@ const colorStore = useColorStore()
     grid-template-columns: auto 1fr;
 
     .page {
-      padding-right: 0.5rem;
+      padding: 2rem v-bind("displayStatusStore.displaySizeMixin({ sm: '1rem', lp: '1rem', pc: '2rem' })");
 
       overflow-y: auto;
     }

@@ -64,9 +64,10 @@ const {
   justify-self: end;
 
   width: 200px;
-  height: 100%;
-  margin: 0px 1rem 2rem 0px;
+  height: calc(100% - 3rem);
+  margin: 2rem 1rem 2rem 1rem;
 
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
   overflow-y: auto;
 
   .section {
