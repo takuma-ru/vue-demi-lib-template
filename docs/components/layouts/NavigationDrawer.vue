@@ -1,4 +1,9 @@
 <template>
+  <div
+    v-if="isOpenDrawer && displayType === 'sm' && !isCurrentPath('/')"
+    class="background"
+    @click="updateIsOpenDrawer(false)"
+  />
   <transition
     name="transition-nav"
     appear
@@ -155,6 +160,18 @@ const {
       }
     }
   }
+
+}
+
+.background {
+  z-index: 9999;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+
+  left: calc(200px + 5rem);
+
+  background-color: transparent;
 }
 
 .transition-nav {
