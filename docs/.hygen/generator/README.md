@@ -1,1 +1,0 @@
-# `hygen/generator`

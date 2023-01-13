@@ -1,6 +1,6 @@
-# Content v2 Minimal Starter
+# Nuxt 3 Minimal Starter
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
@@ -39,4 +39,4 @@ Locally preview production build:
 npm run preview
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

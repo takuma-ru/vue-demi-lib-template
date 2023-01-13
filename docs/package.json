@@ -1,36 +1,13 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "hygen": "hygen",
-    "hygen:component": "yarn hygen generator component",
-    "hygen:composable": "yarn hygen generator composable",
-    "hygen:page": "yarn hygen generator page",
-    "hygen:util": "yarn hygen generator util",
-    "lint": "eslint --fix --ext \".js,.ts,.vue\" --ignore-path .gitignore ."
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
-    "@vueuse/core": "^9.6.0",
-    "@vueuse/nuxt": "^9.6.0",
-    "eslint": "^8.29.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.8.0",
-    "nuxt": "^3.0.0",
-    "sass": "^1.56.2",
-    "typescript": "^4.9.4"
-  },
-  "dependencies": {
-    "@pinia/nuxt": "^0.4.6",
-    "material-symbols": "^0.4.2",
-    "pinia": "^2.0.28",
-    "vite-plugin-eslint": "^1.8.1"
+    "nuxt": "3.0.0"
   }
 }
